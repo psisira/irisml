@@ -50,11 +50,15 @@ classifier = SVC(kernel='linear', random_state=0)
 classifier.fit(x_train, y_train)
 
 # Predicting the results for entire test set (x_test)
-# y_pred = classifier.predict(x_test)
-# print(y_pred)
+y_pred = classifier.predict(x_test)
+print("Predicted types of flowers are:", y_pred)
+
+from sklearn.metrics import accuracy_score
+ac = accuracy_score(y_test, y_pred)
+print("Accuracy Score using SVM is:", ac)
 
 """If uwant to predict results for a given data set i.e. for specific sepal-length', 'sepal-width', 
 'petal-length' and 'petal-width' attributes """
-new_test_values = [[5.9, 3, 5.1, 1.8]]
-z_pred = classifier.predict(new_test_values)
-print("Type of iris flower for given petal and sepal lengths(new_test_values) is :", z_pred)
+# new_test_values = [[5.9, 3, 5.1, 1.8]]
+# z_pred = classifier.predict(new_test_values)
+# print("Type of iris flower for given petal and sepal lengths(new_test_values) is :", z_pred)
