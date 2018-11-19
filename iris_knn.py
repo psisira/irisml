@@ -69,7 +69,7 @@ print("Predicted types of flowers are:", y_pred)
 from sklearn.metrics import confusion_matrix
 cm = confusion_matrix(y_test, y_pred)
 
-#Calculate accuracy score of the model
+# Calculate accuracy score of the model
 from sklearn.metrics import accuracy_score
 ac = accuracy_score(y_test, y_pred)
 print("Accuracy Score using KNN is:", ac)
